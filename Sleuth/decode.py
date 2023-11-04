@@ -20,5 +20,5 @@ def lasso_letter( letter, shift_amount ):
     # Send the decoded letter back
     return decoded_letter
 
-print(lasso_letter('a', 2))
+print(lasso_letter('0', 5))
 print(lasso_letter('N', 13))
