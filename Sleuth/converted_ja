@@ -1,0 +1,21 @@
+
+def lasso_letter( letter, shift_amount ):
+    # ord関数を呼び出して、文字をそのASCIIコードに変換します
+    # 変数に変換後の文字列を保存する
+    letter_code = ord(letter.lower())
+
+    # 小文字の 'a' のASCII数値表現
+    a_ascii = ord('a')
+
+    # アルファベットの文字数
+    alphabet_size = 26
+
+    # デコードされた文字のASCII数値を計算する式
+    # アルファベットをループすることを考慮に入れます
+    true_letter_code = a_ascii + (((letter_code - a_ascii) + shift_amount) % alphabet_size)
+
+    # ASCII数値を文字または文字に変換します
+    decoded_letter = chr(true_letter_code)
+
+    # デコードされた文字を返します
+    return decoded_letter
